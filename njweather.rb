@@ -1,20 +1,22 @@
-weather_spread = []
+weather_spread = 0
 
-weather_spread << File.open('./weather.dat', mode = "r+"){|file| p file.read}
+weather_spread = File.open('./weather.dat', mode = "r+"){|file| p file.read}
 
 #weather_spread.to_s
 p weather_spread.class
-weather_spread[0].to_s
+weather_spread.to_s
 
 
 
 #weather_spread[0].split("\n")
 
 new_weather = []
-p weather_spread[0].class
-new_weather << weather_spread[0].split("\n")
+puts weather_spread.class
+new_weather << weather_spread.split("\n")
 puts "___________________________"
 puts new_weather[2]
+
+
 
 
 

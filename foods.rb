@@ -2,18 +2,18 @@ puts "Enter 5 different foods:"
 
 food_choices = []
 
-5.times do |food|
-	food = gets.chomp
-	food_choices << food
+5.times do 
+	food_choices << gets.chomp
 end
 
 #food_choices.each {|food| puts "I love #{food}"}
 
 # Trying to get a numbered list
 
-x = 0
+counter = 0
 
 food_choices.each do |food| 
-	puts "#{x += 1}. #{food}"
+	puts "#{counter += 1}. #{food}"
 end
 
+sd
