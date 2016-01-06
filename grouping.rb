@@ -12,8 +12,19 @@
 students = []
 puts "Please enter an even amount of names for us to group your students. Type 'done' when you are finished."
 
-until students.length.even? == true && 
+while students.last != "done"
+	students << gets.chomp
+end
 
-students << gets.chomp
-array.length 
+students.pop
+students.shuffle!
+
+p students
+
+students.each_slice(2) do |student_group| 
+
+	puts "Group: #{student_group[0]} & #{student_group[1]}"
+
+end
+
 
