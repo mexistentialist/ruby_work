@@ -7,10 +7,13 @@ food_choices = []
 	food_choices << food
 end
 
-food_choices.each {|food| puts "I love #{food}"}
+#food_choices.each {|food| puts "I love #{food}"}
 
 # Trying to get a numbered list
-5.times do |food| 
-	x = 0
-	puts "#{x+=1}. #{food}"
+
+x = 0
+
+food_choices.each do |food| 
+	puts "#{x += 1}. #{food}"
 end
+
