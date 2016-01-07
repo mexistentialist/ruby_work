@@ -21,9 +21,16 @@ students.shuffle!
 
 p students
 
-students.each_slice(2) do |student_group| 
-
-	puts "Group: #{student_group[0]} & #{student_group[1]}"
+odd_students = []
+if students.length.even? == true
+	students.each_slice(2) do |student_group| 
+		puts "Group: #{student_group[0]} & #{student_group[1]}"
+	end
+	elsif students.length.even? != true
+		students.each_slice(2) do |student_group|
+			odd_students << student_group
+		end
+		p	odd_students + odd_students[-1]+=odd_students[-2]
 
 end
 
