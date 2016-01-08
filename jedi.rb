@@ -6,6 +6,8 @@
 class Jedi
 
 attr_reader :side, :lightsaber, :name
+attr_writer :side
+attr_accessor :side
 
 	def initialize(name, lightsaber, side)
 		@name = name
@@ -15,9 +17,9 @@ attr_reader :side, :lightsaber, :name
 
 #In oder to create a method where I can 
 
-	def change_side(new_side)
-		@side = new_side
-	end
+	# def change_side=(new_side)
+	# 	@side = new_side
+	# end
 
 end
 
@@ -25,9 +27,9 @@ end
 sal = Jedi.new("Obi-Wan", "Blue", "light")
 p sal
 p sal.side
-p sal.lightsaber
-p sal.name
 
-sal.change_side("Dark")
 puts ""
-p sal.side
+p sal.side = "funk"
+p sal
+puts sal
+
