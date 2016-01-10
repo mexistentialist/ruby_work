@@ -4,8 +4,20 @@
 
 def reverse_a_string(string)
 	@string = string.split("")
-	@string.each_with_index do |item, index|
-		index 
+	i = 0
+	j = @string.length - 1
+	while i < j do
+	  last = @string[j]
+		first = @string[i]
+			
+		@string[i] = last
+		@string[j] = first
+
+		i += 1
+		j -= 1
+
+	end
+@string.join
 end
 
 # Driver code - don't touch anything below this line.
